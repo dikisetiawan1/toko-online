@@ -24,8 +24,15 @@ Route::get('/success', [App\Http\Controllers\CartController::class, 'success'])-
 Route::get('/register/success', [App\Http\Controllers\Auth\RegisterController::class, 'success'])->name('register-success');
 Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register');
 Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login');
+
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 Route::get('/dashboard/products', [App\Http\Controllers\DashboardProductController::class, 'index'])->name('dashboard-products');
+Route::get('/dashboard/products/create', [App\Http\Controllers\DashboardProductController::class, 'create'])->name('dashboard-products-create');
+Route::get('/dashboard/products/{id}', [App\Http\Controllers\DashboardProductController::class, 'details'])->name('dashboard-product-details');
 
+Route::get('/dashboard/transactions', [App\Http\Controllers\DashboardTransactionsController::class, 'index'])->name('dashboard-transactions');
+Route::get('/dashboard/transactions/{id}', [App\Http\Controllers\DashboardTransactionsController::class, 'details'])->name('dashboard-transactions-details');
 // Auth::routes();
 
+Route::get('/dashboard/settings', [App\Http\Controllers\DashboardSettingsController::class, 'store'])->name('dashboard-settings');
+Route::get('/dashboard/account', [App\Http\Controllers\DashboardSettingsController::class, 'account'])->name('dashboard-account');
