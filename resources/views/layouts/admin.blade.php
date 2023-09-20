@@ -13,6 +13,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <link href="/style/main.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/v/bs4/dt-1.13.6/datatables.min.css" rel="stylesheet">
     @stack('addon-style')
   </head>
   <body>
@@ -25,7 +26,7 @@
         <img src="/images/admin.png" alt="" class="my-4 " style="width:150px">
       </div>
       <div class="list-group list-group-flush">
-        <a href="/dashboard.html" class="list-group-item list-group-item-action ">
+        <a href="{{route('admin-dashboard')}}" class="list-group-item list-group-item-action ">
           Dashboard
         </a>
         <a href="#" class="list-group-item  list-group-item-action">
@@ -110,8 +111,9 @@
 
 @stack('prepend-script')
     <!-- Bootstrap core JavaScript -->
-    <script src="/vendor/jquery/jquery.slim.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/v/bs4/dt-1.13.6/datatables.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
