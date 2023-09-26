@@ -102,11 +102,7 @@
     </div>
     
   </div>
-  
-  
 </div>
-
-
 
 
 @stack('prepend-script')
