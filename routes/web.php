@@ -39,7 +39,11 @@ Route::get('/dashboard/account', [App\Http\Controllers\DashboardSettingsControll
 
 //Middleware(['Auth','admin'])
 Route::prefix('admin')
-    ->namespace('admin')
+    // ->namespace('admin')
     ->group(function(){
         Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin-dashboard');
+        
+        Route::resource('category', App\Http\Controllers\Admin\CategoryController::class);
+ 
+       
     });
