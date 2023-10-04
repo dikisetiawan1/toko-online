@@ -43,12 +43,12 @@
 
 @push('addon-script')
     <script>
-      var datatable =$('#crudTable').DataTable({
+      var datatable = $('#crudTable').DataTable({
           processing: true,
-          serverside: true,
+          serverSide: true,
           ordering: true,
           ajax: {
-            url: {!! url()->current() !!},
+            url: '{!! url()->current() !!}',
           },
           column: [
             {data: 'id', name:'id'},
